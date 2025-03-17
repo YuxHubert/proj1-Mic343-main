@@ -218,7 +218,7 @@ void write_table(SymbolTable* table, FILE* output) {
     return;
   }
   for (uint32_t i = 0; i < table->len; i++) {
-    Symbol* entry = &table->entries[i];
+    Symbol* entry = &table->symbols[i];
     write_sym(output, entry->addr, entry->name);
   }
 }
